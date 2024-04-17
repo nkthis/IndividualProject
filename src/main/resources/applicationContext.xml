@@ -7,4 +7,12 @@
     <bean id="messageService" class="com.individual.project.MessageService">
         <property name="message" value="Hello Spring!"/>
     </bean>
+
+        <bean id="messageServiceConstructor" class="com.individual.project.MessageService">
+        <constructor-arg value="Hello from Constructor Injection!"/>
+    </bean>
+
+    <bean id="messageServiceSetter" class="com.individual.project.MessageService">
+        <property name="message" value="Hello from Setter Injection!"/>
+    </bean>
 </beans>

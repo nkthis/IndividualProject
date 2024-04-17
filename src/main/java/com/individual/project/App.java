@@ -10,6 +10,8 @@ public class App {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         MessageService service = context.getBean("messageService", MessageService.class);
         service.printMessage();
+        MessageService construMessageService = context.getBean("messageServiceConstructor", MessageService.class);
+        construMessageService.printMessage();
         context.close();
     }
 }
